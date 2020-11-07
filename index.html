@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Happy Birthday </title>
+    <!-- Required meta tags -->
+    <link rel="shortcut icon" href="images/2.jpeg" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text-container" id='text-content'>
+        <div class="text"></div>
+    </div>
+    <div class="container">
+        <div id="card">
+            <div id="card-inside">
+                <div class="wrap">
+                    <div class="message">
+                        <p>Dear Deepshikha😊 ❤️</p>
+                        <p>Since we can't see you on your birthday this year,So we are sending you this virtual gift
+                            !!..
+                        </p>
+                        <p>Wishing you many many many.... happy return of the day HAPPY BIRTHDAY!.</p>
+                        <p> You might have heard this proverb "Birthdays come around every year, but friends like you
+                            only
+                            comes once in a lifetime." We are so glad to have you in our life.</p>
+                        <p>We will be there with you forever.</p>
+                        <p> This was the most sanitized card we could find..😁</p>
+                        <p style="text-align:right;"> from &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<br>
+                            Vandana😎, Pritam😜, Akash🤨, Ekta💁🏼‍♀️, Bunty😉</p>
+                    </div>
+                </div>
+                <button id="close">&times;</button>
+            </div>
+            <div id="card-front">
+                <div class="wrap">
+                    <h1> Happy Birthday Deepshikha !!..</h1>
+                </div>
+                <button id="open">&lt;</button>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="card-container">
+            <div class="message">
+                <div class="front"><img src="images/d.jpg" class="img" alt=""></div>
+            </div>
+            <div class="cover">
+                <h3>Traditional Day </h3>
+                <div class="btn">&lt;</div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="message">
+                <div class="front"><img src="images/d6.jpg" class="img" alt=""></div>
+            </div>
+            <div class="cover">
+                <h3>Hamari Aankhmicholi </h3>
+                <div class="btn">&lt;</div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="message">
+                <div class="front"><img src="images/d4.jpg" class="img" alt=""></div>
+            </div>
+            <div class="cover">
+                <h3>Adventurous Deepshi </h3>
+                <div class="btn">&lt;</div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="message">
+                <div class="front"><img src="images/d5.jpg" class="img" alt=""></div>
+            </div>
+            <div class="cover">
+                <h3>Modal </h3>
+                <div class="btn">&lt;</div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="message">
+                <div class="front"><img src="images/d3.jpg" class="img" alt=""></div>
+            </div>
+            <div class="cover">
+                <h3>Humari First Holi</h3>
+                <div class="btn">&lt;</div>
+                <div class="back"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <iframe src="https://drive.google.com/file/d/15IR9vxYGqRBQnjTpHoj3zqveBY_PNNIn/preview" class="video"
+            width="90vw"></iframe>
+    </div>
+    <div class="container3">
+        <img src="images/collage.jpg" width="100%" alt="">
+        <a href="images/collage.jpg" download>Download</a>
+    </div>
+    <div class="container3">
+        <img src="images/d7.jpg" width="100%" alt="">
+    </div>
+    
+    <div class="container3">
+        <img src="images/d2.jpg" width="100%" alt="">
+    </div>
+    <div class="container2">
+        <iframe src="https://drive.google.com/file/d/15IbQ-H3Kt_jwpQ46SZQ-ym6SqzZ9GOTP/preview" class="video"
+            width="300px"></iframe>
+    </div>
+    <script>
+        (function () {
+            function $(id) {
+                return document.getElementById(id);
+            }
+
+            var card = $('card'),
+                openB = $('open'),
+                closeB = $('close'),
+                timer = null;
+            openB.addEventListener('click', function () {
+                card.setAttribute('class', 'open-half');
+                if (timer) clearTimeout(timer);
+                timer = setTimeout(function () {
+                    card.setAttribute('class', 'open-fully');
+                    timer = null;
+                }, 1000);
+            });
+
+            closeB.addEventListener('click', function () {
+                card.setAttribute('class', 'close-half');
+                if (timer) clearTimerout(timer);
+                timer = setTimeout(function () {
+                    card.setAttribute('class', '');
+                    timer = null;
+                }, 1000);
+            });
+
+        }());
+    </script>
+    <script src="scramble.js"></script>
+    <script>
+        const phrases = ["🍨🥧Happy Birthday to You🎂🥧", "🍬🍩Happy Birthday to You🍿🍫", "🥳🥳Happy Birthday Dear Deepshikha😊☺️",
+            "🍨🥧Happy Birthday to You.🎂🥧", "😉😌From good friends and true🙃🥳,", "😮😝From old friends and new,😎😎",
+            "May good luck go with you,",
+            "🤪😜And happiness too.","🍬🍩Happy Birthday to You🥮🍧", "😁😃happy birthday to you....", "🥳🥳Deepshikha", "happy birthday to you"
+        ];
+        const el = document.querySelector('.text');
+        const fx = new TextScramble(el);
+        let counter = 0;
+
+        const next = () => {
+            fx.setText(phrases[counter]).then(() => {
+                setTimeout(next, 4000);
+            });
+            counter = (counter + 1) % phrases.length;
+        };
+        next();
+    </script>
+    <script>
+        var content=document.getElementById('text-content');
+        var cycle = 0;
+        var allBackgrounds = ["b2.gif",
+            "b3.gif",
+            "b4.gif",
+            "b7.gif",
+            "b6.gif",
+            "b8.gif"
+        ];
+
+        setInterval(function () {
+            if (cycle < 6) {
+                content.style.backgroundImage = "url('images/" + allBackgrounds[cycle] + "')";
+                cycle += 1;
+            } else {
+                cycle = 0;
+            }
+        }, 5000);
+    </script>
+</body>
+
+</html>
